@@ -1,0 +1,22 @@
+{% extends 'base.html'%}
+{%block content %}
+<div class="container shadow" style="width: 800px; margin-top: 5em; padding: 2em">
+    <form method="post">
+        {% csrf_token %} 
+        <h3>Entrez n'importe quel text pour genere un qrcode</h3> 
+        <div class="input-group mb-3"> 
+            <span class="input-group-text" id="inputGroup-sizing-default">
+            QR Code Text:</span> 
+            <input type="text" class="form-control" aria-describedby="inputGroup-sizing-default" name="qr_text" autofocus> 
+        </div> 
+        <div class="input-group mb-3"> 
+            <input type="submit" style="max-width: 200px; margin: auto" class="form-control"> 
+        </div> 
+    </form> 
+    <div class="input-group mb-3"> 
+        <div style="margin: auto"> 
+            {{ svg|safe }} 
+        </div> 
+    </div> 
+</div>
+{% endblock content %}

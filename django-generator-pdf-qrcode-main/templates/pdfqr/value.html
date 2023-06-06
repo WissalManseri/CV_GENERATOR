@@ -1,0 +1,28 @@
+{% extends 'base.html'%}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div class="container">
+    <div class="content">
+        <div class="form-group">
+            <div class="container">
+                <div class="row">
+                    <form method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+
+            
+                            {{documents|crispy}}
+                        
+                        <div class="btn button">
+                            <button type="submit" class="btn btn-warning">valider</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content%}

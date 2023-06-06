@@ -1,0 +1,15 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<div class="container">
+    <div class="content">
+        <p>hello index</p>
+        <button class="btn btn-warning"><a href="{%url 'value'%}">formulaire de creation de cv</a></button>
+        <button class="btn btn-success"><a href="{%url 'list'%}">liste des cv enregistré de cv</a></button>
+        <button class="btn btn-light"><a href="{%url 'qrcode'%}">generateur de qrcode</a></button>
+
+    </div>
+</div>
+
+
+{% endblock content %}
