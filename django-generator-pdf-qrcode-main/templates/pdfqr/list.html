@@ -1,0 +1,17 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<div class="container">
+    <div class="content">
+        {% for document in documents %}
+        <div class="col-md-6">
+            <h2>{{ document.nom }}</h2>
+            <div class="row">
+                <a href="/{{document.id}}" class="btn btn-danger">telecharger le cv </a>
+            </div>
+        </div>
+        {%endfor%}
+    </div>
+</div>
+
+{% endblock content %}
